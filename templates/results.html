@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+</head>
+<body>
+<a href="/home"><--Search again</a><br>
+<a href="/ratings">Compare Ratings</a>
+<a href="/prices">Compare Prices</a>
+<p>Fetched data using <span style="font-weight: bold">{{method}}</span></p>
+<p>Fetched images using <span style="font-weight: bold">{{imageMethod}}</span></p>
+<table border="1" cellpadding="2">
+    <tr>
+        <th>Name</th>
+        <th>Rating</th>
+        <th>Price</th>
+        <th>Address</th>
+        <th>Zipcode</th>
+        <th>Phone</th>
+        <th>Images</th>
+    </tr>
+    {% for restaurant in restaurants %}
+    <tr>
+        <td><a href={{restaurant.url}} target="_blank">{{restaurant.name}}</a></td>
+        <td>{{restaurant.rating}}</td>
+        <td>{{restaurant.price}}</td>
+        <td>{{restaurant.address}}</td>
+        <td>{{restaurant.zip_code}}</td>
+        <td>{{restaurant.phone}}</td>
+        <td>
+            {% for image in restaurant.image_urls %}
+            <img src={{image}} width="100" height="100">
+            {% endfor %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

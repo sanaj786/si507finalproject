@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<form method="post" action="/login">
+    <h3>Login</h3>
+    <table>
+        <tr>
+            <td><label>Unique Id:
+                <input type="text" name="username" required>
+            </label></td>
+            <td><label>Password:
+                <input type="password" name="password" required>
+            </label></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Login"></td>
+        </tr>
+    </table>
+</form>
+{{error}}
+<br>
+<br>
+<form method="post" action="/create">
+    <h3>Create new account</h3>
+    <table>
+        <tr>
+            <td>
+                <label>Name:
+                    <input type="text"  name="name" required>
+                </label></td>
+        </tr>
+        <tr>
+            <td><label>Unique Id:
+                <input type="text"  name="username" required>
+            </label></td>
+        </tr>
+        <tr>
+            <td><label>Location:
+                <input type="text" name="location" required>
+            </label></td>
+        </tr>
+        <tr>
+            <td><label>Password:
+                <input type="password" name="password" required>
+            </label></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Create Account"></td>
+        </tr>
+    </table>
+</form>
+{{error2}}
+</body>
+</html>

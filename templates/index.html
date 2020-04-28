@@ -1,1 +1,70 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Final Project</title>
+</head>
+<body>
+<form method="post" action="/sendData">
+    <h2>Welcome {{username}}</h2>
+    <h3><label>Location*:
+        <input type="text" name="Location" value="{{loc}}" required/>
+    </label></h3>
+    <h3><label>Search Term:
+        <input type="text" name="Term">
+    </label></h3>
+    <h3>Price Filter</h3>
+    <table cellspacing="5">
+        <tr><td><label>
+            <input type="checkbox" name="Price" value="1">Cheap
+        </label></td></tr>
+        <tr><td><label>
+            <input type="checkbox" name="Price" value="2">Reasonable
+        </label></td></tr>
+        <tr><td><label>
+            <input type="checkbox" name="Price" value="3">Expensive
+        </label></td></tr>
+        <tr><td><label>
+            <input type="checkbox" name="Price" value="4">Very Expensive
+        </label></td></tr>
+    </table>
+    <h3>Attributes Filters</h3>
+    <table cellspacing="5">
+        <tr>
+            <td><label>
+                <input type="checkbox" name="Attribute" value="hot_and_new">Hot And New
+            </label></td>
+            <td><label>
+                <input type="checkbox" name="Attribute" value="request_a_quote">Request a Quote
+            </label></td>
+            <td><label>
+                <input type="checkbox" name="Attribute" value="reservation">Reservation
+            </label></td>
+            <td><label>
+                <input type="checkbox" name="Attribute" value="waitlist_reservation">Waitlist_Reservation
+            </label></td>
+            <td><label>
+                <input type="checkbox" name="Attribute" value="cashback">Cashback
+            </label></td>
+        </tr>
+        <tr>
+            <td><label>
+                <input type="checkbox" name="Attribute" value="deals">Deals
+            </label></td>
+            <td><label>
+                <input type="checkbox" name="Attribute" value="gender_neutral_restrooms">Gender Neutral Restrooms
+            </label></td>
+            <td><label>
+                <input type="checkbox" name="Attribute" value="open_to_all">Open To All
+            </label></td>
+            <td><label>
+                <input type="checkbox" name="Attribute" value="wheelchair_accessible">Wheelchair Accessible
+            </label></td>
+        </tr>
+    </table>
+    <input type="submit" value="submit"/>
+    <br>
+    <p>{{ error }}</p>
+</form>
+</body>
+</html>
